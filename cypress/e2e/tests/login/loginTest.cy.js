@@ -9,6 +9,6 @@ describe("Login Test with BasePage", () => {
 
   it("should login successfully", () => {
     loginPage.login("standard_user", "secret_sauce");
-    loginPage.verifyUrlContains("/dashboard");
+    loginPage.verifyUrlContains("/inventory");
   });
 });
