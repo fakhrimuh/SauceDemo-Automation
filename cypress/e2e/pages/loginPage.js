@@ -13,11 +13,6 @@ class LoginPage extends BasePage {
     return cy.getByTestId("login-button");
   }
 
-  errorMessage() {
-    return cy.getByTestId("error-button");
-  }
-
-  // Method untuk aksi di halaman
   login(username, password) {
     this.usernameField().type(username);
     this.passwordField().type(password);

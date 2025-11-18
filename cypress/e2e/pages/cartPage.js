@@ -1,28 +1,8 @@
 import BasePage from "./BasePage";
 
-class InventoryPage extends BasePage {
-  shoppingCart() {
-    return cy.getByTestId("shopping-cart-link");
-  }
-
-  shoppingCartBadge() {
-    return cy.getByTestId("shopping-cart-badge");
-  }
-
-  sortingButton() {
-    return cy.getByTestId("product-sort-container");
-  }
-
-  selectSort(value) {
-    return this.sortingButton().select(value);
-  }
-
-  pageLogo() {
-    return cy.get("#app_logo");
-  }
-
-  inventoryList() {
-    return cy.getByTestId("inventory-list");
+class CartPage extends BasePage {
+  cartList() {
+    return cy.getByTestId("cart-list");
   }
 
   inventoryItem() {
@@ -48,6 +28,14 @@ class InventoryPage extends BasePage {
   removeButton(itemName) {
     return this.getByTestId(`remove-${itemName}`);
   }
+
+  continueShoppingButton() {
+    return cy.getByTestId("continue-shopping");
+  }
+
+  checkoutBtn() {
+    return cy.getByTestId("checkout");
+  }
 }
 
-export default InventoryPage;
+export default CartPage;

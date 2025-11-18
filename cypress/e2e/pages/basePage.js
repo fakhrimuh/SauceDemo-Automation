@@ -26,6 +26,18 @@ class BasePage {
   wait(seconds) {
     cy.wait(seconds * 1000);
   }
+
+  pageTitle() {
+    return cy.getByTestId("title");
+  }
+
+  errorText() {
+    return cy.getByTestId("error");
+  }
+
+  errorMessage() {
+    return cy.getByTestId("error-button");
+  }
 }
 
 export default BasePage;
