@@ -35,7 +35,7 @@ class BasePage {
     return cy.getByTestId("error");
   }
 
-  errorMessage() {
+  errorButton() {
     return cy.getByTestId("error-button");
   }
 }

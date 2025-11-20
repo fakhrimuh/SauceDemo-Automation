@@ -13,6 +13,10 @@ class LoginPage extends BasePage {
     return cy.getByTestId("login-button");
   }
 
+  clickLoginButton() {
+    super.clickElement(this.loginButton());
+  }
+
   login(username, password) {
     this.usernameField().type(username);
     this.passwordField().type(password);
