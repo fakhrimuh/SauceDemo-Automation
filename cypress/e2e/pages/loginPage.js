@@ -2,25 +2,41 @@ import BasePage from "./BasePage";
 
 class LoginPage extends BasePage {
   usernameField() {
-    return cy.getByTestId("username");
+    return '[data-test="username"]';
   }
 
   passwordField() {
-    return cy.getByTestId("password");
+    return '[data-test="password"]';
   }
 
   loginButton() {
-    return cy.getByTestId("login-button");
+    return '[data-test="login-button"]';
+  }
+
+  typeUsername(username) {
+    this.typeText(this.usernameField(), username);
+  }
+
+  typePassword(password) {
+    this.typeText(this.passwordField(), password);
   }
 
   clickLoginButton() {
-    super.clickElement(this.loginButton());
+    this.clickElement(this.loginButton());
   }
 
   login(username, password) {
-    this.usernameField().type(username);
-    this.passwordField().type(password);
-    this.loginButton().click();
+    this.typeUsername(username);
+    this.typePassword(password);
+    this.clickLoginButton();
+  }
+
+  loginSuccess() {
+    this.visitPage();
+    this.login("standard_user", "secret_sauce");
+    this.verifyUrlContains("/inventory");
+    this.verifyTitleVisible();
+    this.verifyTitleText("Products");
   }
 }
 
