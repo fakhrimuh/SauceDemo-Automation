@@ -5,6 +5,10 @@ class InventoryPage extends BasePage {
     return '[data-test="shopping-cart-link"]';
   }
 
+  clickShoppingCart() {
+    this.clickElement(this.shoppingCart());
+  }
+
   shoppingCartBadge() {
     return '[data-test="shopping-cart-badge"]';
   }
@@ -37,6 +41,10 @@ class InventoryPage extends BasePage {
     return '[data-test="inventory-item"]';
   }
 
+  verifyTotalItem(expected) {
+    this.verifyLength(this.inventoryItem(), expected);
+  }
+
   inventoryItemName() {
     return '[data-test="inventory-item-name"]';
   }
@@ -64,6 +72,16 @@ class InventoryPage extends BasePage {
       });
 
       return products;
+    });
+  }
+
+  verifyProductNamesListContains(expectedNames) {
+    this.getAllProducts().then((products) => {
+      const names = products.map((p) => p.name);
+
+      expectedNames.forEach((expectedName) => {
+        expect(names).to.include(expectedName);
+      });
     });
   }
 

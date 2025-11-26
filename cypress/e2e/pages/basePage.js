@@ -19,6 +19,10 @@ class BasePage {
     cy.url().should("include", text);
   }
 
+  verifyLength(selector, length) {
+    this.getElement(selector).should("have.length", length);
+  }
+
   wait(seconds) {
     cy.wait(seconds * 1000);
   }
