@@ -3,62 +3,61 @@ import BasePage from "./BasePage";
 class CheckoutPage extends BasePage {
   // CheckOut Informtaion
   inputFirstName() {
-    return cy.getByTestId("firstName");
+    return '[data-test="firstName"]';
   }
 
   inputLastName() {
-    return cy.getByTestId("lastName");
+    return '[data-test="lastName"]';
   }
 
   inputZipCode() {
-    return cy, this.getByTestId("postalCode");
+    return '[data-test="postalCode"]';
   }
 
   cancelButton() {
-    return cy.getByTestId("cancel");
+    return '[data-test="cancel"]';
   }
 
   continueButton() {
-    return cy.getByTestId("continue");
+    return '[data-test="continue"]';
   }
 
   //Checkout Overview
   paymentInformationText() {
-    return cy.getByTestId("payment-info-value");
+    return '[data-test="payment-info-value"]';
   }
 
   shippingInformationText() {
-    return cy.getByTestId("shipping-info-value");
+    return '[data-test="shipping-info-value"]';
   }
 
   totalItemPrice() {
-    return cy.getByTestId("subtotal-label");
+    return '[data-test="subtotal-label"]';
   }
 
   taxPrice() {
-    return cy.getByTestId("tax-label");
+    return '[data-test="tax-label"]';
   }
 
   totalPrice() {
-    return cy.getByTestId("total-label");
+    return '[data-test="total-label"]';
   }
 
   finishButton() {
-    return cy.getByTestId("finish");
+    return '[data-test="finish"]';
   }
 
   //Checkout Complete
-
   completeCheckoutHeader() {
-    return cy.getByTestId("complete-header");
+    return '[data-test="complete-header"]';
   }
 
   completeCheckoutText() {
-    return cy.getByTestId("complete-text");
+    return '[data-test="complete-text"]';
   }
 
   backHomeButton() {
-    return cy.getByTestId("back-to-products");
+    return '[data-test="back-to-products"]';
   }
 }
 

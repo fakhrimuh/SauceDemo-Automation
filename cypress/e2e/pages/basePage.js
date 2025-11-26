@@ -7,36 +7,68 @@ class BasePage {
     return cy.get(selector);
   }
 
-  getByTestId(testId) {
-    return cy.get(`[data-test="${testId}"]`);
-  }
-
   clickElement(selector) {
     this.getElement(selector).click();
   }
 
   typeText(selector, text) {
-    this.getElement(selector).clear().type(text);
+    this.getElement(selector).type(text);
   }
 
   verifyUrlContains(text) {
     cy.url().should("include", text);
   }
 
+  verifyLength(selector, length) {
+    this.getElement(selector).should("have.length", length);
+  }
+
   wait(seconds) {
     cy.wait(seconds * 1000);
   }
 
+  verifyText(selector, expectedText) {
+    this.getElement(selector).should("have.text", expectedText);
+  }
+
+  verifyTextContains(selector, expectedText) {
+    this.getElement(selector).should("contain.text", expectedText);
+  }
+
+  verifyVisible(selector) {
+    this.getElement(selector).should("be.visible");
+  }
+
+  verifyNotExist(selector) {
+    this.getElement(selector).should("not.exist");
+  }
+
   pageTitle() {
-    return cy.getByTestId("title");
+    return '[data-test="title"]';
   }
 
   errorText() {
-    return cy.getByTestId("error");
+    return '[data-test="error"]';
   }
 
-  errorMessage() {
-    return cy.getByTestId("error-button");
+  errorButton() {
+    return '[data-test="error-button"]';
+  }
+
+  verifyTitleVisible() {
+    this.verifyVisible(this.pageTitle());
+  }
+
+  verifyTitleText(expected) {
+    this.verifyText(this.pageTitle(), expected);
+  }
+
+  verifyErrorMessageVisible() {
+    this.verifyVisible(this.errorText());
+  }
+
+  verifyErrorMessage(expected) {
+    this.verifyText(this.errorText(), expected);
   }
 }
 
