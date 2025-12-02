@@ -15,10 +15,12 @@ class CartPage extends BasePage {
 
   clickContinuShoppingBtn() {
     this.clickElement(this.continueShoppingButton());
+    cy.stepScreenshot("click-continue-shopping");
   }
 
   clickCheckoutBtn() {
     this.clickElement(this.checkoutBtn());
+    cy.stepScreenshot("click-checkout");
   }
 }
 

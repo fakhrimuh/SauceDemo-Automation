@@ -1,0 +1,14 @@
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Cypress
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+Cypress/
+
+# Environment
+.env
+.env.*

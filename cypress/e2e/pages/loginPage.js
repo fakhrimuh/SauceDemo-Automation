@@ -15,14 +15,17 @@ class LoginPage extends BasePage {
 
   typeUsername(username) {
     this.typeText(this.usernameField(), username);
+    cy.stepScreenshot("fill-username");
   }
 
   typePassword(password) {
     this.typeText(this.passwordField(), password);
+    cy.stepScreenshot("fill-password");
   }
 
   clickLoginButton() {
     this.clickElement(this.loginButton());
+    cy.stepScreenshot("after-click-login");
   }
 
   login(username, password) {

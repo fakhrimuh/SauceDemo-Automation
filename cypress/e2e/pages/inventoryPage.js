@@ -7,6 +7,7 @@ class InventoryPage extends BasePage {
 
   clickShoppingCart() {
     this.clickElement(this.shoppingCart());
+    cy.stepScreenshot("Cart-Page");
   }
 
   shoppingCartBadge() {
@@ -75,6 +76,12 @@ class InventoryPage extends BasePage {
     });
   }
 
+  calculateTotalPrice() {
+    return this.getAllProducts().then((products) => {
+      return products.reduce((acc, p) => acc + p.price, 0);
+    });
+  }
+
   verifyProductNamesListContains(expectedNames) {
     this.getAllProducts().then((products) => {
       const names = products.map((p) => p.name);
@@ -94,18 +101,22 @@ class InventoryPage extends BasePage {
       switch (type) {
         case "az":
           expected.sort((a, b) => a.name.localeCompare(b.name));
+          cy.stepScreenshot("sorting-az");
           break;
 
         case "za":
           expected.sort((a, b) => b.name.localeCompare(a.name));
+          cy.stepScreenshot("sorting-za");
           break;
 
         case "lohi":
           expected.sort((a, b) => a.price - b.price);
+          cy.stepScreenshot("sorting-lohi");
           break;
 
         case "hilo":
           expected.sort((a, b) => b.price - a.price);
+          cy.stepScreenshot("sorting-hilo");
           break;
 
         default:
@@ -134,6 +145,7 @@ class InventoryPage extends BasePage {
 
   clickAddtoCart(itemName) {
     this.clickElement(this.addToCartButton(itemName));
+    cy.stepScreenshot(`add-to-cart-(${itemName})`);
   }
 
   removeButton(itemName) {
@@ -150,6 +162,7 @@ class InventoryPage extends BasePage {
 
   clickRemoveButton(itemName) {
     this.clickElement(this.removeButton(itemName));
+    cy.stepScreenshot(`remove-(${itemName})`);
   }
 }
 
