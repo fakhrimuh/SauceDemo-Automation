@@ -24,6 +24,9 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
-Cypress.Commands.add("getByTestId", (testId) => {
-  return cy.get(`[data-test="${testId}"]`);
+Cypress.Commands.add("stepScreenshot", (stepName) => {
+  const testName = Cypress.mocha.getRunner().test.title;
+  const specName = Cypress.spec.name.replace(".cy.js", "");
+  const folder = `${specName}/${testName}`;
+  cy.screenshot(`${folder}/${stepName}`, { capture: "runner" });
 });
