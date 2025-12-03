@@ -69,6 +69,7 @@ class BasePage {
 
   verifyErrorMessage(expected) {
     this.verifyText(this.errorText(), expected);
+    cy.stepScreenshot("verify error message");
   }
 }
 

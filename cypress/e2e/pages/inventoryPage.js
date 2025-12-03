@@ -164,6 +164,59 @@ class InventoryPage extends BasePage {
     this.clickElement(this.removeButton(itemName));
     cy.stepScreenshot(`remove-(${itemName})`);
   }
+
+  // Sidebar
+  openSidebarBtn() {
+    return "#react-burger-menu-btn";
+  }
+
+  clickOpenSidebar() {
+    this.clickElement(this.openSidebarBtn());
+  }
+
+  closeSidebarBtn() {
+    return '[data-test="close-menu"]';
+  }
+
+  clickCloseSidebar() {
+    this.clickElement(this.closeSidebarBtn());
+  }
+
+  allItemsSidebarBtn() {
+    return '[data-test="inventory-sidebar-link"]';
+  }
+
+  clickAllitems() {
+    this.clickElement(this.allItemsSidebarBtn());
+    cy.stepScreenshot("click all items");
+  }
+
+  aboutSidebarBtn() {
+    return '[data-test="about-sidebar-link"]';
+  }
+
+  clickAbout() {
+    this.clickElement(this.aboutSidebarBtn());
+    cy.stepScreenshot("click about");
+  }
+
+  logoutSidebarBtn() {
+    return '[data-test="logout-sidebar-link"]';
+  }
+
+  clickLogout() {
+    this.clickElement(this.logoutSidebarBtn());
+    cy.stepScreenshot("click logout");
+  }
+
+  resetAppStateSidebarBtn() {
+    return '[data-test="reset-sidebar-link"]';
+  }
+
+  clickResetState() {
+    this.clickElement(this.resetAppStateSidebarBtn());
+    cy.stepScreenshot("click reset state");
+  }
 }
 
 export default InventoryPage;
