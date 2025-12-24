@@ -13,261 +13,261 @@ describe("Login Feature Test Case", () => {
     loginPage.loginSuccess();
   });
 
-  // it("Sorting Product", () => {
-  //   inventoryPage.validateSorting("lohi");
-  //   inventoryPage.validateSorting("az");
-  //   inventoryPage.validateSorting("hilo");
-  //   inventoryPage.validateSorting("za");
-  // });
+  it("Sorting Product", () => {
+    inventoryPage.validateSorting("lohi");
+    inventoryPage.validateSorting("az");
+    inventoryPage.validateSorting("hilo");
+    inventoryPage.validateSorting("za");
+  });
 
-  // it("add product to cart", () => {
-  //   inventoryPage.verifyAddToCartButtonVisible("sauce-labs-backpack");
-  //   inventoryPage.clickAddtoCart("sauce-labs-backpack");
-  //   inventoryPage.verifyRemoveButtonVisible("sauce-labs-backpack");
-  //   inventoryPage.verifyCartBadgeVisible();
-  //   inventoryPage.verifyCartBadgeValue("1");
-  //   inventoryPage.clickShoppingCart();
-  //   // Cart Page
-  //   inventoryPage.verifyTitleText("Your Cart");
-  //   inventoryPage.verifyTotalItem(1);
-  //   inventoryPage.verifyProductNamesListContains(["Sauce Labs Backpack"]);
-  // });
+  it("add product to cart", () => {
+    inventoryPage.verifyAddToCartButtonVisible("sauce-labs-backpack");
+    inventoryPage.clickAddtoCart("sauce-labs-backpack");
+    inventoryPage.verifyRemoveButtonVisible("sauce-labs-backpack");
+    inventoryPage.verifyCartBadgeVisible();
+    inventoryPage.verifyCartBadgeValue("1");
+    inventoryPage.clickShoppingCart();
+    // Cart Page
+    inventoryPage.verifyTitleText("Your Cart");
+    inventoryPage.verifyTotalItem(1);
+    inventoryPage.verifyProductNamesListContains(["Sauce Labs Backpack"]);
+  });
 
-  // it("add multiple product to cart", () => {
-  //   inventoryPage.verifyAddToCartButtonVisible("sauce-labs-backpack");
-  //   inventoryPage.clickAddtoCart("sauce-labs-backpack");
-  //   inventoryPage.verifyRemoveButtonVisible("sauce-labs-backpack");
-  //   inventoryPage.verifyCartBadgeVisible();
-  //   inventoryPage.verifyCartBadgeValue("1");
-  //   inventoryPage.verifyAddToCartButtonVisible("sauce-labs-bike-light");
-  //   inventoryPage.clickAddtoCart("sauce-labs-bike-light");
-  //   inventoryPage.verifyRemoveButtonVisible("sauce-labs-bike-light");
-  //   inventoryPage.verifyCartBadgeValue("2");
-  //   inventoryPage.clickShoppingCart();
-  //   // Cart Page
-  //   inventoryPage.verifyTitleText("Your Cart");
-  //   inventoryPage.verifyTotalItem(2);
-  //   inventoryPage.verifyProductNamesListContains([
-  //     "Sauce Labs Backpack",
-  //     "Sauce Labs Bike Light",
-  //   ]);
-  // });
+  it("add multiple product to cart", () => {
+    inventoryPage.verifyAddToCartButtonVisible("sauce-labs-backpack");
+    inventoryPage.clickAddtoCart("sauce-labs-backpack");
+    inventoryPage.verifyRemoveButtonVisible("sauce-labs-backpack");
+    inventoryPage.verifyCartBadgeVisible();
+    inventoryPage.verifyCartBadgeValue("1");
+    inventoryPage.verifyAddToCartButtonVisible("sauce-labs-bike-light");
+    inventoryPage.clickAddtoCart("sauce-labs-bike-light");
+    inventoryPage.verifyRemoveButtonVisible("sauce-labs-bike-light");
+    inventoryPage.verifyCartBadgeValue("2");
+    inventoryPage.clickShoppingCart();
+    // Cart Page
+    inventoryPage.verifyTitleText("Your Cart");
+    inventoryPage.verifyTotalItem(2);
+    inventoryPage.verifyProductNamesListContains([
+      "Sauce Labs Backpack",
+      "Sauce Labs Bike Light",
+    ]);
+  });
 
-  // it("remove product from homepage", () => {
-  //   inventoryPage.verifyAddToCartButtonVisible("sauce-labs-backpack");
-  //   inventoryPage.clickAddtoCart("sauce-labs-backpack");
-  //   inventoryPage.verifyRemoveButtonVisible("sauce-labs-backpack");
-  //   inventoryPage.verifyCartBadgeVisible();
-  //   inventoryPage.verifyCartBadgeValue("1");
-  //   inventoryPage.clickShoppingCart();
-  //   // Cart Page
-  //   inventoryPage.verifyTitleText("Your Cart");
-  //   inventoryPage.verifyTotalItem(1);
-  //   inventoryPage.verifyProductNamesListContains(["Sauce Labs Backpack"]);
-  //   cartPage.clickContinuShoppingBtn();
-  //   // Inventory Page
-  //   inventoryPage.verifyTitleText("Products");
-  //   inventoryPage.verifyCartBadgeValue("1");
-  //   inventoryPage.clickRemoveButton("sauce-labs-backpack");
-  //   inventoryPage.verifyAddToCartButtonVisible("sauce-labs-backpack");
-  //   inventoryPage.clickShoppingCart();
-  //   inventoryPage.verifyTotalItem(0);
-  // });
+  it("remove product from homepage", () => {
+    inventoryPage.verifyAddToCartButtonVisible("sauce-labs-backpack");
+    inventoryPage.clickAddtoCart("sauce-labs-backpack");
+    inventoryPage.verifyRemoveButtonVisible("sauce-labs-backpack");
+    inventoryPage.verifyCartBadgeVisible();
+    inventoryPage.verifyCartBadgeValue("1");
+    inventoryPage.clickShoppingCart();
+    // Cart Page
+    inventoryPage.verifyTitleText("Your Cart");
+    inventoryPage.verifyTotalItem(1);
+    inventoryPage.verifyProductNamesListContains(["Sauce Labs Backpack"]);
+    cartPage.clickContinuShoppingBtn();
+    // Inventory Page
+    inventoryPage.verifyTitleText("Products");
+    inventoryPage.verifyCartBadgeValue("1");
+    inventoryPage.clickRemoveButton("sauce-labs-backpack");
+    inventoryPage.verifyAddToCartButtonVisible("sauce-labs-backpack");
+    inventoryPage.clickShoppingCart();
+    inventoryPage.verifyTotalItem(0);
+  });
 
-  // it("remove multiple product from homepage", () => {
-  //   inventoryPage.verifyAddToCartButtonVisible("sauce-labs-backpack");
-  //   inventoryPage.clickAddtoCart("sauce-labs-backpack");
-  //   inventoryPage.verifyRemoveButtonVisible("sauce-labs-backpack");
-  //   inventoryPage.verifyCartBadgeVisible();
-  //   inventoryPage.verifyCartBadgeValue("1");
-  //   inventoryPage.verifyAddToCartButtonVisible("sauce-labs-bike-light");
-  //   inventoryPage.clickAddtoCart("sauce-labs-bike-light");
-  //   inventoryPage.verifyRemoveButtonVisible("sauce-labs-bike-light");
-  //   inventoryPage.verifyCartBadgeValue("2");
-  //   inventoryPage.clickShoppingCart();
-  //   // Cart Page
-  //   inventoryPage.verifyTitleText("Your Cart");
-  //   inventoryPage.verifyTotalItem(2);
-  //   inventoryPage.verifyProductNamesListContains([
-  //     "Sauce Labs Backpack",
-  //     "Sauce Labs Bike Light",
-  //   ]);
-  //   cartPage.clickContinuShoppingBtn();
-  //   // Inventory Page
-  //   inventoryPage.verifyTitleText("Products");
-  //   inventoryPage.verifyCartBadgeValue("2");
-  //   inventoryPage.clickRemoveButton("sauce-labs-backpack");
-  //   inventoryPage.verifyAddToCartButtonVisible("sauce-labs-backpack");
-  //   inventoryPage.verifyCartBadgeValue("1");
-  //   inventoryPage.clickRemoveButton("sauce-labs-bike-light");
-  //   inventoryPage.verifyAddToCartButtonVisible("sauce-labs-bike-light");
-  //   inventoryPage.verifyCartBadgeNotExist();
-  //   inventoryPage.clickShoppingCart();
-  //   inventoryPage.verifyTotalItem(0);
-  // });
+  it("remove multiple product from homepage", () => {
+    inventoryPage.verifyAddToCartButtonVisible("sauce-labs-backpack");
+    inventoryPage.clickAddtoCart("sauce-labs-backpack");
+    inventoryPage.verifyRemoveButtonVisible("sauce-labs-backpack");
+    inventoryPage.verifyCartBadgeVisible();
+    inventoryPage.verifyCartBadgeValue("1");
+    inventoryPage.verifyAddToCartButtonVisible("sauce-labs-bike-light");
+    inventoryPage.clickAddtoCart("sauce-labs-bike-light");
+    inventoryPage.verifyRemoveButtonVisible("sauce-labs-bike-light");
+    inventoryPage.verifyCartBadgeValue("2");
+    inventoryPage.clickShoppingCart();
+    // Cart Page
+    inventoryPage.verifyTitleText("Your Cart");
+    inventoryPage.verifyTotalItem(2);
+    inventoryPage.verifyProductNamesListContains([
+      "Sauce Labs Backpack",
+      "Sauce Labs Bike Light",
+    ]);
+    cartPage.clickContinuShoppingBtn();
+    // Inventory Page
+    inventoryPage.verifyTitleText("Products");
+    inventoryPage.verifyCartBadgeValue("2");
+    inventoryPage.clickRemoveButton("sauce-labs-backpack");
+    inventoryPage.verifyAddToCartButtonVisible("sauce-labs-backpack");
+    inventoryPage.verifyCartBadgeValue("1");
+    inventoryPage.clickRemoveButton("sauce-labs-bike-light");
+    inventoryPage.verifyAddToCartButtonVisible("sauce-labs-bike-light");
+    inventoryPage.verifyCartBadgeNotExist();
+    inventoryPage.clickShoppingCart();
+    inventoryPage.verifyTotalItem(0);
+  });
 
-  // it("remove product from cart", () => {
-  //   inventoryPage.verifyAddToCartButtonVisible("sauce-labs-backpack");
-  //   inventoryPage.clickAddtoCart("sauce-labs-backpack");
-  //   inventoryPage.verifyRemoveButtonVisible("sauce-labs-backpack");
-  //   inventoryPage.verifyCartBadgeVisible();
-  //   inventoryPage.verifyCartBadgeValue("1");
-  //   inventoryPage.clickShoppingCart();
-  //   // Cart Page
-  //   inventoryPage.verifyTitleText("Your Cart");
-  //   inventoryPage.verifyTotalItem(1);
-  //   inventoryPage.verifyProductNamesListContains(["Sauce Labs Backpack"]);
-  //   inventoryPage.clickRemoveButton("sauce-labs-backpack");
-  //   inventoryPage.verifyTotalItem(0);
-  //   cartPage.clickContinuShoppingBtn();
-  //   // Inventory Page
-  //   inventoryPage.verifyTitleText("Products");
-  //   inventoryPage.verifyCartBadgeNotExist();
-  //   inventoryPage.verifyAddToCartButtonVisible("sauce-labs-backpack");
-  // });
+  it("remove product from cart", () => {
+    inventoryPage.verifyAddToCartButtonVisible("sauce-labs-backpack");
+    inventoryPage.clickAddtoCart("sauce-labs-backpack");
+    inventoryPage.verifyRemoveButtonVisible("sauce-labs-backpack");
+    inventoryPage.verifyCartBadgeVisible();
+    inventoryPage.verifyCartBadgeValue("1");
+    inventoryPage.clickShoppingCart();
+    // Cart Page
+    inventoryPage.verifyTitleText("Your Cart");
+    inventoryPage.verifyTotalItem(1);
+    inventoryPage.verifyProductNamesListContains(["Sauce Labs Backpack"]);
+    inventoryPage.clickRemoveButton("sauce-labs-backpack");
+    inventoryPage.verifyTotalItem(0);
+    cartPage.clickContinuShoppingBtn();
+    // Inventory Page
+    inventoryPage.verifyTitleText("Products");
+    inventoryPage.verifyCartBadgeNotExist();
+    inventoryPage.verifyAddToCartButtonVisible("sauce-labs-backpack");
+  });
 
-  // it("remove multiple product from cart", () => {
-  //   inventoryPage.verifyAddToCartButtonVisible("sauce-labs-backpack");
-  //   inventoryPage.clickAddtoCart("sauce-labs-backpack");
-  //   inventoryPage.verifyRemoveButtonVisible("sauce-labs-backpack");
-  //   inventoryPage.verifyCartBadgeVisible();
-  //   inventoryPage.verifyCartBadgeValue("1");
-  //   inventoryPage.verifyAddToCartButtonVisible("sauce-labs-bike-light");
-  //   inventoryPage.clickAddtoCart("sauce-labs-bike-light");
-  //   inventoryPage.verifyRemoveButtonVisible("sauce-labs-bike-light");
-  //   inventoryPage.verifyCartBadgeValue("2");
-  //   inventoryPage.clickShoppingCart();
-  //   inventoryPage.verifyTotalItem(2);
-  //   inventoryPage.verifyProductNamesListContains([
-  //     "Sauce Labs Backpack",
-  //     "Sauce Labs Bike Light",
-  //   ]);
-  //   inventoryPage.clickRemoveButton("sauce-labs-backpack");
-  //   inventoryPage.verifyTotalItem(1);
-  //   inventoryPage.clickRemoveButton("sauce-labs-bike-light");
-  //   inventoryPage.verifyTotalItem(0);
-  //   cartPage.clickContinuShoppingBtn();
-  //   inventoryPage.verifyCartBadgeNotExist();
-  //   inventoryPage.verifyAddToCartButtonVisible("sauce-labs-backpack");
-  //   inventoryPage.verifyAddToCartButtonVisible("sauce-labs-bike-light");
-  // });
+  it("remove multiple product from cart", () => {
+    inventoryPage.verifyAddToCartButtonVisible("sauce-labs-backpack");
+    inventoryPage.clickAddtoCart("sauce-labs-backpack");
+    inventoryPage.verifyRemoveButtonVisible("sauce-labs-backpack");
+    inventoryPage.verifyCartBadgeVisible();
+    inventoryPage.verifyCartBadgeValue("1");
+    inventoryPage.verifyAddToCartButtonVisible("sauce-labs-bike-light");
+    inventoryPage.clickAddtoCart("sauce-labs-bike-light");
+    inventoryPage.verifyRemoveButtonVisible("sauce-labs-bike-light");
+    inventoryPage.verifyCartBadgeValue("2");
+    inventoryPage.clickShoppingCart();
+    inventoryPage.verifyTotalItem(2);
+    inventoryPage.verifyProductNamesListContains([
+      "Sauce Labs Backpack",
+      "Sauce Labs Bike Light",
+    ]);
+    inventoryPage.clickRemoveButton("sauce-labs-backpack");
+    inventoryPage.verifyTotalItem(1);
+    inventoryPage.clickRemoveButton("sauce-labs-bike-light");
+    inventoryPage.verifyTotalItem(0);
+    cartPage.clickContinuShoppingBtn();
+    inventoryPage.verifyCartBadgeNotExist();
+    inventoryPage.verifyAddToCartButtonVisible("sauce-labs-backpack");
+    inventoryPage.verifyAddToCartButtonVisible("sauce-labs-bike-light");
+  });
 
-  // it("failed checkout because checkout information empty", () => {
-  //   inventoryPage.verifyAddToCartButtonVisible("sauce-labs-backpack");
-  //   inventoryPage.clickAddtoCart("sauce-labs-backpack");
-  //   inventoryPage.verifyRemoveButtonVisible("sauce-labs-backpack");
-  //   inventoryPage.verifyCartBadgeVisible();
-  //   inventoryPage.verifyCartBadgeValue("1");
-  //   inventoryPage.clickShoppingCart();
-  //   // Cart page
-  //   inventoryPage.verifyTitleText("Your Cart");
-  //   cartPage.clickCheckoutBtn();
-  //   // Checkout Information page
-  //   checkoutPage.verifyTitleText("Checkout: Your Information");
-  //   checkoutPage.clickContinueBtn();
-  //   checkoutPage.verifyErrorMessage("Error: First Name is required");
-  // });
+  it("failed checkout because checkout information empty", () => {
+    inventoryPage.verifyAddToCartButtonVisible("sauce-labs-backpack");
+    inventoryPage.clickAddtoCart("sauce-labs-backpack");
+    inventoryPage.verifyRemoveButtonVisible("sauce-labs-backpack");
+    inventoryPage.verifyCartBadgeVisible();
+    inventoryPage.verifyCartBadgeValue("1");
+    inventoryPage.clickShoppingCart();
+    // Cart page
+    inventoryPage.verifyTitleText("Your Cart");
+    cartPage.clickCheckoutBtn();
+    // Checkout Information page
+    checkoutPage.verifyTitleText("Checkout: Your Information");
+    checkoutPage.clickContinueBtn();
+    checkoutPage.verifyErrorMessage("Error: First Name is required");
+  });
 
-  // it("failed checkout because last name and zip code checkout information empty", () => {
-  //   inventoryPage.verifyAddToCartButtonVisible("sauce-labs-backpack");
-  //   inventoryPage.clickAddtoCart("sauce-labs-backpack");
-  //   inventoryPage.verifyRemoveButtonVisible("sauce-labs-backpack");
-  //   inventoryPage.verifyCartBadgeVisible();
-  //   inventoryPage.verifyCartBadgeValue("1");
-  //   inventoryPage.clickShoppingCart();
-  //   // Cart Page
-  //   inventoryPage.verifyTitleText("Your Cart");
-  //   cartPage.clickCheckoutBtn();
-  //   // Checkout Information Page
-  //   checkoutPage.verifyTitleText("Checkout: Your Information");
-  //   checkoutPage.typeFirstName("Test");
-  //   checkoutPage.clickContinueBtn();
-  //   checkoutPage.verifyErrorMessage("Error: Last Name is required");
-  // });
+  it("failed checkout because last name and zip code checkout information empty", () => {
+    inventoryPage.verifyAddToCartButtonVisible("sauce-labs-backpack");
+    inventoryPage.clickAddtoCart("sauce-labs-backpack");
+    inventoryPage.verifyRemoveButtonVisible("sauce-labs-backpack");
+    inventoryPage.verifyCartBadgeVisible();
+    inventoryPage.verifyCartBadgeValue("1");
+    inventoryPage.clickShoppingCart();
+    // Cart Page
+    inventoryPage.verifyTitleText("Your Cart");
+    cartPage.clickCheckoutBtn();
+    // Checkout Information Page
+    checkoutPage.verifyTitleText("Checkout: Your Information");
+    checkoutPage.typeFirstName("Test");
+    checkoutPage.clickContinueBtn();
+    checkoutPage.verifyErrorMessage("Error: Last Name is required");
+  });
 
-  // it("failed checkout because zip code checkout information empty", () => {
-  //   inventoryPage.verifyAddToCartButtonVisible("sauce-labs-backpack");
-  //   inventoryPage.clickAddtoCart("sauce-labs-backpack");
-  //   inventoryPage.verifyRemoveButtonVisible("sauce-labs-backpack");
-  //   inventoryPage.verifyCartBadgeVisible();
-  //   inventoryPage.verifyCartBadgeValue("1");
-  //   inventoryPage.clickShoppingCart();
-  //   // Cart Page
-  //   inventoryPage.verifyTitleText("Your Cart");
-  //   cartPage.clickCheckoutBtn();
-  //   // Checkout information Page
-  //   checkoutPage.verifyTitleText("Checkout: Your Information");
-  //   checkoutPage.typeFirstName("Test");
-  //   checkoutPage.typeLastName("Test");
-  //   checkoutPage.clickContinueBtn();
-  //   checkoutPage.verifyErrorMessage("Error: Postal Code is required");
-  // });
+  it("failed checkout because zip code checkout information empty", () => {
+    inventoryPage.verifyAddToCartButtonVisible("sauce-labs-backpack");
+    inventoryPage.clickAddtoCart("sauce-labs-backpack");
+    inventoryPage.verifyRemoveButtonVisible("sauce-labs-backpack");
+    inventoryPage.verifyCartBadgeVisible();
+    inventoryPage.verifyCartBadgeValue("1");
+    inventoryPage.clickShoppingCart();
+    // Cart Page
+    inventoryPage.verifyTitleText("Your Cart");
+    cartPage.clickCheckoutBtn();
+    // Checkout information Page
+    checkoutPage.verifyTitleText("Checkout: Your Information");
+    checkoutPage.typeFirstName("Test");
+    checkoutPage.typeLastName("Test");
+    checkoutPage.clickContinueBtn();
+    checkoutPage.verifyErrorMessage("Error: Postal Code is required");
+  });
 
-  // it("success Checkout a product", () => {
-  //   inventoryPage.verifyAddToCartButtonVisible("sauce-labs-backpack");
-  //   inventoryPage.clickAddtoCart("sauce-labs-backpack");
-  //   inventoryPage.verifyRemoveButtonVisible("sauce-labs-backpack");
-  //   inventoryPage.verifyCartBadgeVisible();
-  //   inventoryPage.verifyCartBadgeValue("1");
-  //   inventoryPage.clickShoppingCart();
-  //   // Cart Page
-  //   inventoryPage.verifyTitleText("Your Cart");
-  //   cartPage.clickCheckoutBtn();
-  //   // Checkout your information page
-  //   checkoutPage.verifyTitleText("Checkout: Your Information");
-  //   checkoutPage.typeFirstName("Test");
-  //   checkoutPage.typeLastName("Test");
-  //   checkoutPage.typeZipCode("12345");
-  //   checkoutPage.clickContinueBtn();
-  //   // Checkout overview page
-  //   checkoutPage.verifyTitleText("Checkout: Overview");
-  //   checkoutPage.verifyItemTotalMatchesProductPrices(inventoryPage);
-  //   checkoutPage.verifyTotalEqualsItemPlusTax();
-  //   checkoutPage.clickFinishBtn();
-  //   // Checkout Complete page
-  //   checkoutPage.verifyTitleText("Checkout: Complete!");
-  //   checkoutPage.clcikBackHomeBtn();
-  //   // Back To Inventory Page
-  //   inventoryPage.verifyAddToCartButtonVisible("sauce-labs-backpack");
-  // });
+  it("success Checkout a product", () => {
+    inventoryPage.verifyAddToCartButtonVisible("sauce-labs-backpack");
+    inventoryPage.clickAddtoCart("sauce-labs-backpack");
+    inventoryPage.verifyRemoveButtonVisible("sauce-labs-backpack");
+    inventoryPage.verifyCartBadgeVisible();
+    inventoryPage.verifyCartBadgeValue("1");
+    inventoryPage.clickShoppingCart();
+    // Cart Page
+    inventoryPage.verifyTitleText("Your Cart");
+    cartPage.clickCheckoutBtn();
+    // Checkout your information page
+    checkoutPage.verifyTitleText("Checkout: Your Information");
+    checkoutPage.typeFirstName("Test");
+    checkoutPage.typeLastName("Test");
+    checkoutPage.typeZipCode("12345");
+    checkoutPage.clickContinueBtn();
+    // Checkout overview page
+    checkoutPage.verifyTitleText("Checkout: Overview");
+    checkoutPage.verifyItemTotalMatchesProductPrices(inventoryPage);
+    checkoutPage.verifyTotalEqualsItemPlusTax();
+    checkoutPage.clickFinishBtn();
+    // Checkout Complete page
+    checkoutPage.verifyTitleText("Checkout: Complete!");
+    checkoutPage.clcikBackHomeBtn();
+    // Back To Inventory Page
+    inventoryPage.verifyAddToCartButtonVisible("sauce-labs-backpack");
+  });
 
-  // it("success Checkout multiple product", () => {
-  //   inventoryPage.verifyAddToCartButtonVisible("sauce-labs-backpack");
-  //   inventoryPage.clickAddtoCart("sauce-labs-backpack");
-  //   inventoryPage.verifyRemoveButtonVisible("sauce-labs-backpack");
-  //   inventoryPage.verifyCartBadgeVisible();
-  //   inventoryPage.verifyCartBadgeValue("1");
-  //   inventoryPage.verifyAddToCartButtonVisible("sauce-labs-bike-light");
-  //   inventoryPage.clickAddtoCart("sauce-labs-bike-light");
-  //   inventoryPage.verifyRemoveButtonVisible("sauce-labs-bike-light");
-  //   inventoryPage.verifyCartBadgeValue("2");
-  //   // Cart Page
-  //   inventoryPage.clickShoppingCart();
-  //   inventoryPage.verifyTitleText("Your Cart");
-  //   inventoryPage.verifyTotalItem(2);
-  //   inventoryPage.verifyProductNamesListContains([
-  //     "Sauce Labs Backpack",
-  //     "Sauce Labs Bike Light",
-  //   ]);
-  //   cartPage.clickCheckoutBtn();
-  //   // Checkout your information page
-  //   checkoutPage.verifyTitleText("Checkout: Your Information");
-  //   checkoutPage.typeFirstName("Test");
-  //   checkoutPage.typeLastName("Test");
-  //   checkoutPage.typeZipCode("12345");
-  //   checkoutPage.clickContinueBtn();
-  //   // Checkout overview page
-  //   checkoutPage.verifyTitleText("Checkout: Overview");
-  //   checkoutPage.verifyItemTotalMatchesProductPrices(inventoryPage);
-  //   checkoutPage.verifyTotalEqualsItemPlusTax();
-  //   checkoutPage.clickFinishBtn();
-  //   // Checkout Complete page
-  //   checkoutPage.verifyTitleText("Checkout: Complete!");
-  //   checkoutPage.clcikBackHomeBtn();
-  //   // Back To Inventory Page
-  //   inventoryPage.verifyAddToCartButtonVisible("sauce-labs-backpack");
-  //   inventoryPage.verifyAddToCartButtonVisible("sauce-labs-bike-light");
-  // });
+  it("success Checkout multiple product", () => {
+    inventoryPage.verifyAddToCartButtonVisible("sauce-labs-backpack");
+    inventoryPage.clickAddtoCart("sauce-labs-backpack");
+    inventoryPage.verifyRemoveButtonVisible("sauce-labs-backpack");
+    inventoryPage.verifyCartBadgeVisible();
+    inventoryPage.verifyCartBadgeValue("1");
+    inventoryPage.verifyAddToCartButtonVisible("sauce-labs-bike-light");
+    inventoryPage.clickAddtoCart("sauce-labs-bike-light");
+    inventoryPage.verifyRemoveButtonVisible("sauce-labs-bike-light");
+    inventoryPage.verifyCartBadgeValue("2");
+    // Cart Page
+    inventoryPage.clickShoppingCart();
+    inventoryPage.verifyTitleText("Your Cart");
+    inventoryPage.verifyTotalItem(2);
+    inventoryPage.verifyProductNamesListContains([
+      "Sauce Labs Backpack",
+      "Sauce Labs Bike Light",
+    ]);
+    cartPage.clickCheckoutBtn();
+    // Checkout your information page
+    checkoutPage.verifyTitleText("Checkout: Your Information");
+    checkoutPage.typeFirstName("Test");
+    checkoutPage.typeLastName("Test");
+    checkoutPage.typeZipCode("12345");
+    checkoutPage.clickContinueBtn();
+    // Checkout overview page
+    checkoutPage.verifyTitleText("Checkout: Overview");
+    checkoutPage.verifyItemTotalMatchesProductPrices(inventoryPage);
+    checkoutPage.verifyTotalEqualsItemPlusTax();
+    checkoutPage.clickFinishBtn();
+    // Checkout Complete page
+    checkoutPage.verifyTitleText("Checkout: Complete!");
+    checkoutPage.clcikBackHomeBtn();
+    // Back To Inventory Page
+    inventoryPage.verifyAddToCartButtonVisible("sauce-labs-backpack");
+    inventoryPage.verifyAddToCartButtonVisible("sauce-labs-bike-light");
+  });
 
   it("Reset App State", () => {
     inventoryPage.verifyAddToCartButtonVisible("sauce-labs-backpack");
