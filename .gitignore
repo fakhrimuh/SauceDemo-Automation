@@ -7,7 +7,6 @@ yarn-error.log
 cypress/videos/
 cypress/screenshots/
 cypress/downloads/
-Cypress/
 
 # Environment
 .env
